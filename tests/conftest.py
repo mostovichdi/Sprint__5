@@ -9,15 +9,8 @@ from data import DataToLogin
 
 
 @pytest.fixture
-def driver() -> webdriver.Chrome:
+def driver() -> webdriver.Chrome: # type: ignore
     driver = webdriver.Chrome()
     driver.maximize_window()
     yield driver
     driver.quit()
-
-
-@pytest.fixture
-def login_user(driver):
-    name = DataToLogin.NAME
-    email = DataToLogin.EMAIL
-    password = DataToLogin.PASSWORD
