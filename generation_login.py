@@ -25,7 +25,3 @@ class GenerationEmailPassword:
         # length = random.randint(5, 10)
         self.name = ''.join(random.choice(chars) for char in range(6))
         return self.name
-    
-
-# generate = GenerationEmailPassword()
-# generate.
