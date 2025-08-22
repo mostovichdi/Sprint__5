@@ -8,3 +8,4 @@ class ExpectedText:
     BREAD = "Булки"
     SAUCES = "Соусы"
     FILLINGS = "Начинки"
+    PLACE_ORDER = "Оформить заказ"

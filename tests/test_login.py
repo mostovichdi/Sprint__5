@@ -1,5 +1,5 @@
 from selenium import webdriver
-from data import DataToLogin
+from data import DataToLogin, ExpectedText
 from locators import LoginPage, MainPage, RegistrationPage, ForgotPasswordPage
 import urls as urls
 from selenium.webdriver.support import expected_conditions as EC
@@ -56,7 +56,7 @@ class TestLogin:
         text_of_order = driver.find_element(
             *MainPage.button_place_order_in_account
         ).text
-        assert text_of_order == "Оформить заказ"
+        assert text_of_order == ExpectedText.PLACE_ORDER
 
     def test_check_login_from_registration_page(self, driver: webdriver.Chrome):
         email = DataToLogin.EMAIL
